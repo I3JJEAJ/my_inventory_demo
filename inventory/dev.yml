@@ -2,3 +2,4 @@ all:
   hosts:
     localhost:
       create_ns_namespace: "oc-dev"
+      ansible_connection: local
