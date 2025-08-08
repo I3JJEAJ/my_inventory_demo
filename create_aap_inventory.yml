@@ -15,5 +15,6 @@
         overwrite: true
         update_on_launch: true
         organization: Default
+        source: scm
         source_path: inventory/dev.yml
         source_project: MyInventory
