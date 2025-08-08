@@ -1,0 +1,19 @@
+- name: Create AAP Inventory
+  hosts: localhost
+  tasks:
+    - name: Add inventory
+      ansible.controller.inventory:
+        name: "Demo"
+        description: "Our Foo Cloud Servers"
+        organization: "Default"
+    
+    - name: Add inventory source
+      ansible.controller.inventory_source:
+        name: "source-inventory"
+        description: Source for inventory
+        inventory: "Demo"
+        overwrite: true
+        update_on_launch: true
+        organization: Default
+        source_path: inventory/dev.yml
+        source_project: MyInventory
