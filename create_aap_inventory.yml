@@ -20,7 +20,7 @@
         source_project: MyInventory
 
     - name: Update a single inventory source
-      inventory_source_update:
+      ansible.controller.inventory_source_update:
         name: "source-inventory"
         inventory: "Demo"
         organization: Default
