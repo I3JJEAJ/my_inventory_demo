@@ -3,7 +3,7 @@
   tasks:
     - name: Add inventory
       ansible.controller.inventory:
-        name: "Demo"
+        name: "Demo Dev"
         description: "Our Foo Cloud Servers"
         organization: "Default"
     
@@ -11,7 +11,7 @@
       ansible.controller.inventory_source:
         name: "source-inventory"
         description: Source for inventory
-        inventory: "Demo"
+        inventory: "Demo Dev"
         overwrite: true
         update_on_launch: true
         organization: Default
@@ -22,5 +22,29 @@
     - name: Update a single inventory source
       ansible.controller.inventory_source_update:
         name: "source-inventory"
-        inventory: "Demo"
+        inventory: "Demo Dev"
+        organization: Default
+
+    - name: Add inventory
+      ansible.controller.inventory:
+        name: "Demo QT"
+        description: "Our Foo Cloud Servers"
+        organization: "Default"
+    
+    - name: Add inventory source
+      ansible.controller.inventory_source:
+        name: "source-inventory"
+        description: Source for inventory
+        inventory: "Demo QT"
+        overwrite: true
+        update_on_launch: true
+        organization: Default
+        source: scm
+        source_path: inventory/qt.yml
+        source_project: MyInventory
+
+    - name: Update a single inventory source
+      ansible.controller.inventory_source_update:
+        name: "source-inventory"
+        inventory: "Demo QT"
         organization: Default

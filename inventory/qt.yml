@@ -1,4 +1,4 @@
 all:
   hosts:
-    openshift1:
-      create_ns_namespace: "oc1"
+    localhost:
+      create_ns_namespace: "oc-qt"
