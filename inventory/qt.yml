@@ -1,0 +1,4 @@
+all:
+  hosts:
+    openshift1:
+      create_ns_namespace: "oc1"
